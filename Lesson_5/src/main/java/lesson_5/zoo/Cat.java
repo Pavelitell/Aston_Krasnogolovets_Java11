@@ -1,4 +1,4 @@
-package lesson_5;
+package lesson_5.zoo;
 
 public class Cat extends Animal {
     public String name;
@@ -32,8 +32,8 @@ public class Cat extends Animal {
         System.out.println("Кошки не умеют плавать.");
     }
 
-    public void eat(Bowl cat) {
-        cat.decreaseFood(appetite);
+    public void eat(Bowl i) {
+        i.decreaseFood(appetite);
     }
 
     public static int getCountCat(){

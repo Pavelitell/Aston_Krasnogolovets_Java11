@@ -1,4 +1,4 @@
-package lesson_5;
+package lesson_5.zoo;
 
 public class Bowl {
 
@@ -12,7 +12,7 @@ public class Bowl {
     public void increaseFood(int x) {
         food += x;
     }
-    public static void info() {
+    public void info() {
         System.out.println("Всего еды: " + food);
     }
 

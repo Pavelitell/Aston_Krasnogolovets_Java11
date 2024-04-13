@@ -1,4 +1,4 @@
-package lesson_5;
+package lesson_5.zoo;
 
 public class Animal {
     static int countAnimal = 0;
