@@ -1,7 +1,7 @@
 package lesson_5.zoo;
 
 public class Dog extends Animal {
-    String name;
+    private String name;
     static int countDod = 0;
 
     public Dog(String name){
@@ -23,9 +23,9 @@ public class Dog extends Animal {
     @Override
     public void swim(int range) {
         if (range > 10) {
-            System.out.println( name +"не сможет проплыть больше 10ти метровю");
+            System.out.println( name +" не сможет проплыть больше 10ти метров");
         } else {
-            System.out.println(name + " проплыл " + range + " м");
+            System.out.println(name + " проплыл " + range + " метров");
         }
     }
 

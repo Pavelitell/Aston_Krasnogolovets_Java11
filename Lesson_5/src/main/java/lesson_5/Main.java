@@ -39,41 +39,44 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Cat barsik = new Cat("Барсик", 10, false);
-        Dog tuzik = new Dog("Тузик");
+        Animal leapold = new Cat("Леапольд", 10, false);
+        Animal graph = new Dog("Граф");
 
-        barsik.run(150);
-        barsik.run(201);
-        barsik.swim(200);
-        tuzik.run(500);
-        tuzik.run(501);
-        tuzik.swim(10);
-        tuzik.swim(11);
+        leapold.run(150);
+        leapold.swim(200);
+        graph.run(500);
+        graph.run(501);
+        graph.swim(10);
+        graph.swim(11);
 
+        int firstAction;
         int action;
         Cat[] cats = new Cat[4];
-        cats[0] = new Cat("Барсик", 10, false);
-        cats[1] = new Cat("Снежок", 10, false);
-        cats[2] = new Cat("Мурзик", 10, false);
-        cats[3] = new Cat("Чернышка", 10, false);
+        cats[0] = new Cat("Кузя", 10, false);
+        cats[1] = new Cat("Маруся", 10, false);
+        cats[2] = new Cat("Рыжик", 10, false);
+        cats[3] = new Cat("Толстячок", 20, false);
 
-        Bowl bowl = new Bowl(39);
-        bowl.info();
+//      Сколько изначанльно должно быть корма в миске  ?
+        System.out.println("Коты пришли поесть, сколько грамм хотите положить ?");
+        firstAction = scanner.nextInt();
+        Bowl bowl = new Bowl(firstAction);
+
         //Если в миске есть еда
         if (Bowl.food >= 0) {
             //Для каждого кота
             for (Cat cat : cats) {
                 //если в миске меньше еды чем рацион кота, тот к ней не подойдет
-                if (cat.appetite > Bowl.food) {
-                    System.out.println("Котик " + cat.name + " ходит вокруг да около миски, потому что там недостаточно еды");
+                if (cat.getAppetite() > Bowl.food) {
+                    System.out.println("Котик " + cat.getName() + " ходит вокруг да около миски, потому что там недостаточно еды");
                     break;
                 }
                 //Если кот голоден
-                if (!cat.fullness) {
-                    //кот ест
+                if (!cat.isFullness()) {
+                    //кот ест и насыщается
                     cat.eat(bowl);
-                    cat.fullness = true;
-                    System.out.println("Сытость котов " + cat.fullness);
+                    cat.setFullness(true);
+                    System.out.println("Сытость котов " + cat.isFullness());
                 }
             }
         }
@@ -87,18 +90,12 @@ public class Main {
         System.out.println("Всех котов: " + Cat.getCountCat());
         System.out.println("Всех собак: " + Dog.getCountDod());
 //------------------------------------------------------------------------------------------------------------
-
         Circle circle = new Circle(5, "Red", "Black");
         Rectangle rectangle = new Rectangle(4, 6, "Blue", "Green");
         Triangle triangle = new Triangle(3, 4, 5, "Yellow", "Brown");
 
-
         System.out.println("Круг: Периметр - " + circle.calculatePerimeter() + ", Площадь - " + circle.calculateArea() + ", Цвет заливки - " + circle.getFillColor() + ", Цвет границы - " + circle.getBorderColor());
         System.out.println("Прямоугольник: Периметр - " + rectangle.calculatePerimeter() + ", Площадь - " + rectangle.calculateArea() + ", Цвет заливки - " + rectangle.getFillColor() + ", Цвет границы - " + rectangle.getBorderColor());
         System.out.println("Треугольник: Периметр - " + triangle.calculatePerimeter() + ", Площадь - " + triangle.calculateArea() + ", Цвет заливки - " + triangle.getFillColor() + ", Цвет границы - " + triangle.getBorderColor());
-
-
     }
-
-
 }

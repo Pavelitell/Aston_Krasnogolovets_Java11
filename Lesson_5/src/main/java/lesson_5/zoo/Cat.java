@@ -1,11 +1,26 @@
 package lesson_5.zoo;
 
 public class Cat extends Animal {
-    public String name;
-    public int appetite;
-    public boolean fullness;
+    private String name;
+    private int appetite;
+    private boolean fullness;
 
 
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAppetite() {
+        return appetite;
+    }
+
+    public boolean isFullness() {
+        return fullness;
+    }
+    public void setFullness(boolean fullness) {
+        this.fullness = fullness;
+    }
     static int countCat = 0;
 
     public Cat(String name,int appetite,boolean fullness){
