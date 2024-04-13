@@ -23,25 +23,25 @@ public class Main {
 
 
         int action;
-        Cat[] allCats = new Cat[4];
-        allCats[0] = new Cat("Барсик", 5, false);
-        allCats[1] = new Cat("Снежок", 30, false);
-        allCats[2] = new Cat("Мурзик", 10, false);
-        allCats[3] = new Cat("Чернышка", 45, false);
+        Cat[] Cats = new Cat[4];
+        Cats[0] = new Cat("Барсик", 5, false);
+        Cats[1] = new Cat("Снежок", 30, false);
+        Cats[2] = new Cat("Мурзик", 10, false);
+        Cats[3] = new Cat("Чернышка", 45, false);
 
         Bowl bowl = new Bowl(50);
         bowl.info();
-        for (int i = 0; i < allCats.length; i++) {
-            if (allCats[i].fullness == false && allCats[i].appetite < bowl.food) {
-                allCats[i].eat(bowl);
-                allCats[i].fullness = true;
-                System.out.println("Котик " + allCats[i].name + " покушал!");
+        for (int i = 0; i < Cats.length; i++) {
+            if (Cats[i].fullness == false && Cats[i].appetite < bowl.food) {
+                Cats[i].eat(bowl);
+                Cats[i].fullness = true;
+                System.out.println( Cats[i].name + " покушал!");
             } else {
-                System.out.println("Котик " + allCats[i].name + " не поел!");
+                System.out.println( Cats[i].name + " не поел!");
             }
         }
         bowl.info();
-        System.out.println("Сколько грамм вискаса добавить еще в миску?");
+        System.out.println("Можно добавить еду, сколько ?");
         action = scanner.nextInt();
         bowl.increaseFood(action);
         bowl.info();

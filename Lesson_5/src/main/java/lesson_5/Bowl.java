@@ -2,7 +2,7 @@ package lesson_5;
 
 public class Bowl {
 
-    public int food;
+    public static int food;
     public Bowl(int food) {
         this.food = food;
     }
