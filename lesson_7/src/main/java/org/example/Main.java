@@ -3,7 +3,11 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        String[][] arr = new String[][]{{"1", "2", "3", "4"}, {"2", "2", "2", "3"}, {"1", "2", "2", "2"}, {"2", "2", "2", "2"}};
+        String[][] arr = new String[][]{
+                {"1", "2", "3", "4"},
+                {"2", "2", "2", "3"},
+                {"1", "2", "2", "2"},
+                {"2", "2", "2", "2"}};
         try {
             try {
                 int result = method(arr);
@@ -17,8 +21,6 @@ public class Main {
         }
 
     }
-
-
     public static int method(String[][] arr) throws MyArraySizeException, MyArrayDataException {
         int count = 0;
         if (arr.length != 4) {
