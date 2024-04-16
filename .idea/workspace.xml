@@ -25,6 +25,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -39,33 +46,116 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.MainTest.e2e.executor": "Run",
+    "JUnit.MainTest.executor": "Run",
+    "JUnit.OnlineReplenishment.cookieDisaktiveAndCheckRightWorkPlace.executor": "Debug",
+    "JUnit.OnlineReplenishment.disaktiveCookie.executor": "Run",
+    "JUnit.OnlineReplenishment.e2e.executor": "Run",
+    "JUnit.OnlineReplenishment.executor": "Run",
+    "JUnit.OnlineReplenishment.logos.executor": "Run",
+    "JUnit.OnlineReplenishment.moreInfo.executor": "Run",
+    "JUnit.OnlineReplenishmentTest$NegtiveTest.e2eNoMany.executor": "Run",
+    "JUnit.OnlineReplenishmentTest$NegtiveTest.e2eNoPhone.executor": "Run",
+    "JUnit.OnlineReplenishmentTest$NegtiveTest.executor": "Run",
+    "JUnit.OnlineReplenishmentTest.cookieDisaktiveAndCheckRightWorkPlace.executor": "Run",
+    "JUnit.OnlineReplenishmentTest.cookieDisaktiveAndCheckRightWorkPlaceTest.executor": "Run",
+    "JUnit.OnlineReplenishmentTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "corretto-11",
     "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson_4.Main" />
-      <module name="Lesson_4" />
+  <component name="RunManager" selected="JUnit.OnlineReplenishmentTest$NegtiveTest">
+    <configuration name="OnlineReplenishmentTest$NegtiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson_13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson_4.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="tests.OnlineReplenishmentTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.OnlineReplenishmentTest$NegtiveTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnlineReplenishmentTest$NegtiveTest.e2eNoMany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson_13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.OnlineReplenishmentTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.OnlineReplenishmentTest$NegtiveTest" />
+      <option name="METHOD_NAME" value="e2eNoMany" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnlineReplenishmentTest$NegtiveTest.e2eNoPhone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson_13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.OnlineReplenishmentTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.OnlineReplenishmentTest$NegtiveTest" />
+      <option name="METHOD_NAME" value="e2eNoPhone" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnlineReplenishmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson_13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.OnlineReplenishmentTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnlineReplenishmentTest.cookieDisaktiveAndCheckRightWorkPlaceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson_13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.OnlineReplenishmentTest" />
+      <option name="METHOD_NAME" value="cookieDisaktiveAndCheckRightWorkPlaceTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.OnlineReplenishmentTest$NegtiveTest" />
+        <item itemvalue="JUnit.OnlineReplenishmentTest$NegtiveTest.e2eNoPhone" />
+        <item itemvalue="JUnit.OnlineReplenishmentTest$NegtiveTest.e2eNoMany" />
+        <item itemvalue="JUnit.OnlineReplenishmentTest.cookieDisaktiveAndCheckRightWorkPlaceTest" />
+        <item itemvalue="JUnit.OnlineReplenishmentTest" />
       </list>
     </recent_temporary>
   </component>
@@ -86,5 +176,23 @@
       <updated>1708876917679</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
+          <option name="timeStamp" value="10" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.jdks/corretto-11.0.22/lib/src.zip!/java.base/java/lang/ExceptionInInitializerError.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
