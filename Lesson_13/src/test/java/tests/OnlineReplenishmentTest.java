@@ -3,7 +3,9 @@ package tests;
 import core.BaseTest;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.function.Executable;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.MainPage;
 
@@ -61,11 +63,13 @@ public class OnlineReplenishmentTest extends BaseTest {
         assertTrue(iframeClass.getPayMentContainerTitleSum().contains("123.00 BYN"));
         assertTrue(iframeClass.getPayMentContainerNumber().contains("Оплата: Услуги связи Номер:375" + mainPage.testPhoneNumber));
     }
+
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
     public class NegtiveTest {
         MainPage mainPage = new MainPage();
         MainPage.Iframe iframeClass = new MainPage.Iframe();
+        Actions actions = new Actions(driver);
 
         @Test
         @Order(1)
@@ -74,7 +78,7 @@ public class OnlineReplenishmentTest extends BaseTest {
         public void CommunicationServiciesNoNoMany() {
             mainPage.cookieButton.click();
             mainPage.NoSumE2e();
-          assertThrows(NoSuchElementException.class,() ->iframeClass.getPayMentContainerNumber().contains("Оплата: Услуги связи Номер:375" + mainPage.testPhoneNumber));
+            assertThrows(NoSuchElementException.class, () -> iframeClass.getPayMentContainerNumber().contains("Оплата: Услуги связи Номер:375" + mainPage.testPhoneNumber));
         }
 
         @Test
@@ -83,6 +87,29 @@ public class OnlineReplenishmentTest extends BaseTest {
         public void CommunicationServiciesNoPhone() {
             mainPage.wrongPhoneNumberE2e();
             assertTrue(mainPage.getErrorPhoneNumbermessege().contains("Введите номер телефона"));
+
+        }
+
+        @Test
+        public void communicationGetPropertyDOM() {
+            mainPage.cookieButton.click();
+            actions.moveToElement(mainPage.title);
+            actions.perform();
+            Assertions.assertTrue(mainPage.phoneTextBox.getDomProperty("placeholder").contains("Номер телефона"));
+            Assertions.assertTrue(mainPage.sumTextBox.getDomProperty("placeholder").contains("Сумма"));
+            Assertions.assertTrue(mainPage.emailTextBox.getDomProperty("placeholder").contains("E-mail для отправки чека"));
+        }
+
+        @Test
+        public void homeInternetGetPropertyDOM() {
+            mainPage.cookieButton.click();
+            actions.moveToElement(mainPage.title);
+            actions.perform();
+            mainPage.selectHeader.click();
+            mainPage.homeInternetSelectHeader.click();
+            Assertions.assertTrue(mainPage.phoneTextBoxHomeInt.getDomProperty("placeholder").contains("Номер абонента"));
+           Assertions.assertTrue(mainPage.sumTextBoxHomeInt.getDomProperty("placeholder").contains("Сумма"));
+            Assertions.assertTrue(mainPage.emailTextBoxHomeInt.getDomProperty("placeholder").contains("E-mail для отправки чека"));
         }
     }
 }

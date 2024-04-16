@@ -17,26 +17,33 @@ import java.time.Duration;
 import java.util.List;
 
 public class MainPage extends BasePage {
-    /*
+    /* задание 13
  Необходимо написать автотесты для сайта mts.by. Суть тестов заключается в проверке блока «Онлайн пополнение без комиссии»:
 1. Проверить название указанного блока;
 2. Проверить наличие логотипов платёжных систем;
 3. Проверить работу ссылки «Подробнее о сервисе»;
 4. Заполнить поля и проверить работу кнопки «Продолжить» (проверяем только вариант «Услуги связи», номер для теста 297777777)
   */
+    /* Задание 14
+    Продолжим работу над блоком «Онлайн пополнение без комиссии» сайта mts.by.
+1. Проверить надписи в незаполненных полях каждого варианта оплаты услуг: услуги связи, домашний интернет, рассрочка, задолженность;
+2. Для варианта «Услуги связи» заполнить поля в соответствии с пререквизитами из предыдущей темы, нажать кнопку «Продолжить» и в появившемся окне проверить корректность отображения суммы (в том числе на кнопке), номера телефона,
+ а также надписей в незаполненных полях для ввода реквизитов карты, наличие иконок платёжных систем.
+     */
     @FindBy(xpath = "//*[@id=\"cookie-agree\"]") public WebElement cookieButton;
     @FindBy(xpath = "//*[@id=\"pay-section\"]/div/div/div[2]/section/div/h2") public WebElement title;
     @FindBy(xpath = "//*[@id=\"pay-section\"]/div/div/div[2]/section/div/div[1]/div[1]/div[2]/button") public WebElement selectHeader;
+    @FindBy(xpath = "//*[@id=\"pay-section\"]/div/div/div[2]/section/div/div[1]/div[1]/div[2]/ul/li[2]/p") public WebElement homeInternetSelectHeader;
     //---------------------Услуги связи------------------------------
-    @FindBy(xpath = "//*[@id=\"connection-phone\"]") private WebElement phoneTextBox;
-    @FindBy(xpath = "//*[@id=\"connection-sum\"]") private WebElement sumTextBox;
-    @FindBy(xpath = "//*[@id=\"connection-email\"]") private WebElement emailTextBox;
+    @FindBy(xpath = "//*[@id=\"connection-phone\"]") public WebElement phoneTextBox;
+    @FindBy(xpath = "//*[@id=\"connection-sum\"]") public WebElement sumTextBox;
+    @FindBy(xpath = "//*[@id=\"connection-email\"]") public WebElement emailTextBox;
     @FindBy(xpath = "//*[@id=\"pay-connection\"]/button") private WebElement continueButton;
     //---------------------------------Домашний интернет-----------------------
-    @FindBy(xpath = "//*[@id=\"internet-phone\"]") private WebElement phoneTextBoxHomeInt;
-    @FindBy(xpath = "//*[@id=\"internet-sum\"]") private WebElement sumTextBoxHomeInt;
-    @FindBy(xpath = "//*[@id=\"internet-email\"]") private WebElement emailTextBoxHomeInt;
-    @FindBy(xpath = "//*[@id=\"pay-internet\"]/button") private WebElement continueButtonHomeINt;
+    @FindBy(xpath = "//*[@id=\"internet-phone\"]") public WebElement phoneTextBoxHomeInt;
+    @FindBy(xpath = "//*[@id=\"internet-sum\"]") public WebElement sumTextBoxHomeInt;
+    @FindBy(xpath = "//*[@id=\"internet-email\"]") public WebElement emailTextBoxHomeInt;
+    @FindBy(xpath = "//*[@id=\"pay-internet\"]/button") public WebElement continueButtonHomeINt;
     //--------------------------------Рассрочка--------------------------------
     @FindBy(xpath = "//*[@id=\"score-instalment\"]") private WebElement accountNumber;
     @FindBy(xpath = "//*[@id=\"instalment-sum\"]") private WebElement instalmentSumTextBox;
@@ -124,9 +131,6 @@ public class MainPage extends BasePage {
         public WebElement cartName;
         @FindBy(xpath = "/html/body/app-root/div/div/app-payment-container/section/app-card-page/div/div[1]/button") public WebElement payButton;
 
-        public Iframe() {
-            PageFactory.initElements(driver, this);
-        }
 
         public String getPayMentContainerTitleSum() {
             return payMentContainerTitleSumm.getText();
