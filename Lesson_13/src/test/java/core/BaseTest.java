@@ -30,8 +30,8 @@ abstract public class BaseTest {
 
     @AfterAll
     public static void tearDown() {
-        driver.close();
-        driver.quit();
+//        driver.close();
+//        driver.quit();
     }
 }
 
