@@ -1,6 +1,7 @@
 package pages;
 
 import core.BasePage;
+import org.junit.jupiter.api.Nested;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -114,5 +115,46 @@ public class MainPage extends BasePage {
         phoneTextBox.click();
         phoneTextBox.sendKeys(testPhoneNumber);
         continueButton.click();
+    }
+
+
+    public static class Iframe {
+        @FindBy(xpath = "*//iframe[@class = 'bepaid-iframe']")
+        public WebElement payMentContainer;
+        @FindBy(xpath = "*//div[@class = 'pay-description__cost']")
+        public WebElement payMentContainerTitleSumm;
+        @FindBy(xpath = "*//span[@class = 'pay-description__text']")
+        public WebElement payMentContainerNumber;
+        @FindBy(xpath = "*//div[@class= 'header__close-button']")
+        public WebElement payMentContainerESCButtun;
+        @FindBy(xpath = "*//div[@class='content ng-tns-c50-1']")
+        public WebElement cartNumberInputMessege;
+        @FindBy(xpath = "*//label[@class='ng-tns-c50-4 ng-star-inserted']")
+        public WebElement cartValidityInputMessege;
+        @FindBy(xpath = "*//div[@class='icons-container ng-tns-c50-1']")
+        public List<WebElement> cartIcons;
+        @FindBy(xpath = "*//div[@class='content ng-tns-c50-5']")
+        public WebElement cartCVCInputMessege;
+        @FindBy(xpath = "*//div[@class='content ng-tns-c50-3']")
+        public WebElement cartNameInputMessege;
+        @FindBy(xpath = "*//button[@class='colored disabled']")
+        public WebElement payButtonMessege;
+
+        public Iframe(){
+            PageFactory.initElements(driver, this);
+        }
+
+
+        public String getPayMentContainerTitleSum() {
+            return payMentContainerTitleSumm.getText();
+        }
+
+        public String getPayMentContainerNumber() {
+            return payMentContainerNumber.getText();
+        }
+
+        public void goToIframe() {
+            driver.switchTo().frame(payMentContainer);
+        }
     }
 }

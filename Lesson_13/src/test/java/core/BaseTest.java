@@ -23,15 +23,16 @@ abstract public class BaseTest {
         driver = new ChromeDriver();
         WebDriverManager.chromedriver().setup();
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(20, SECONDS);
-        driver.manage().timeouts().implicitlyWait(20, SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(10, SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, SECONDS);
         BasePage.setDriver(driver);
     }
 
     @AfterAll
-    public static void tearDown() {
-//        driver.close();
-//        driver.quit();
+    public static void tearDown() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.close();
+        driver.quit();
     }
 }
 

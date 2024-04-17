@@ -54,6 +54,7 @@
     "JUnit.OnlineReplenishment.executor": "Run",
     "JUnit.OnlineReplenishment.logos.executor": "Run",
     "JUnit.OnlineReplenishment.moreInfo.executor": "Run",
+    "JUnit.OnlineReplenishmentTest$NegtiveTest.CommunicationServiciesNoNoMany.executor": "Run",
     "JUnit.OnlineReplenishmentTest$NegtiveTest.e2eNoMany.executor": "Run",
     "JUnit.OnlineReplenishmentTest$NegtiveTest.e2eNoPhone.executor": "Run",
     "JUnit.OnlineReplenishmentTest$NegtiveTest.executor": "Run",
@@ -77,39 +78,7 @@
     "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.OnlineReplenishmentTest.e2e">
-    <configuration name="OnlineReplenishmentTest$NegtiveTest.rassrochkaGetInputText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lesson_14" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.OnlineReplenishmentTest" />
-      <option name="MAIN_CLASS_NAME" value="tests.OnlineReplenishmentTest$NegtiveTest" />
-      <option name="METHOD_NAME" value="rassrochkaGetInputText" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OnlineReplenishmentTest$NegtiveTest.zadolzhennostGetInputText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lesson_14" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.OnlineReplenishmentTest" />
-      <option name="MAIN_CLASS_NAME" value="tests.OnlineReplenishmentTest$NegtiveTest" />
-      <option name="METHOD_NAME" value="zadolzhennostGetInputText" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.OnlineReplenishmentTest">
     <configuration name="OnlineReplenishmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lesson_14" />
       <extension name="coverage">
@@ -121,6 +90,38 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.OnlineReplenishmentTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnlineReplenishmentTest.cartInputText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson_14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.OnlineReplenishmentTest" />
+      <option name="METHOD_NAME" value="cartInputText" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnlineReplenishmentTest.cookieDisaktiveAndCheckRightWorkPlaceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lesson_14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.OnlineReplenishmentTest" />
+      <option name="METHOD_NAME" value="cookieDisaktiveAndCheckRightWorkPlaceTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OnlineReplenishmentTest.e2e" />
-        <item itemvalue="JUnit.OnlineReplenishmentTest.e2eNoEmail" />
         <item itemvalue="JUnit.OnlineReplenishmentTest" />
-        <item itemvalue="JUnit.OnlineReplenishmentTest$NegtiveTest.zadolzhennostGetInputText" />
-        <item itemvalue="JUnit.OnlineReplenishmentTest$NegtiveTest.rassrochkaGetInputText" />
+        <item itemvalue="JUnit.OnlineReplenishmentTest.cartInputText" />
+        <item itemvalue="JUnit.OnlineReplenishmentTest.e2e" />
+        <item itemvalue="JUnit.OnlineReplenishmentTest.cookieDisaktiveAndCheckRightWorkPlaceTest" />
+        <item itemvalue="JUnit.OnlineReplenishmentTest.e2eNoEmail" />
       </list>
     </recent_temporary>
   </component>
